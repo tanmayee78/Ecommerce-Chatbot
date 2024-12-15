@@ -1,68 +1,182 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header {
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-button {
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #23486f;
+  color: white;
+  margin-top: 2rem;
+}
+
+nav {
+  padding: 1rem 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  background-color: #2e2e2f;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+
+nav ul li a:active {
+  color: #ff9f43;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem 2rem;
+}
+
+.product-card {
+  background-color: #e5ebf1;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.product-card h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.product-card p {
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+}
+
+.product-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
+.chatbot-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.chatbox {
+  width: 400px;
+  background-color: #e8e9ea;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.messages {
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.message.user {
+  background-color: #113782;
+  color: white;
+  text-align: right;
+}
+
+.message.bot {
+  background-color: #bac2d3;
+  color: #2a2a2a;
+}
+
+.input-area {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+}
+
+.input-area input {
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #cececf;
+}
+
+.input-area button {
+  width: 15%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.input-area button:hover {
+  background-color: #0056b3;
 }
